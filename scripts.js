@@ -31,5 +31,9 @@ const newPatient = (bp, pulse, respirations, diagnosis) => {
 while (true) {
     newPatient({systolic: 70, diastolic: 40}, 120, 10, "hypovolemic")
     let symptom = prompt("What would you like to check?")
-    console.log(patient[symptom])
+    if (symptom === "bp") {
+        alert(patient.bp.systolic + "/" + patient.bp.diastolic)
+    } else {
+        alert(patient[symptom])
+    }
 }
